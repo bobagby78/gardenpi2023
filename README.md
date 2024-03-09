@@ -1,4 +1,4 @@
-# gardenpi2023
+ 31# gardenpi2023
 
 Gardenpi uses an 8 relay module to control power to various components to run an aquaponic grow system consisting of 2 fish tanks, one for the aquaponic garden and one for overflow (because guppies reproduce A LOT!!!)
 

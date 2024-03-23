@@ -26,10 +26,10 @@ def runPump():
         GPIO.output(pump, GPIO.LOW)
         GPIO.output(testChannel1, GPIO.LOW)
         print('pump on')
-        sleep(35)
+        sleep(38)
         GPIO.output(pump, GPIO.HIGH)
         GPIO.output(testChannel1, GPIO.HIGH)
         print('pump off')
-        sleep(25)
+        sleep(22)
 
 runPump()

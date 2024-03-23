@@ -5,12 +5,18 @@ from datetime import datetime
 
 GPIO.setmode(GPIO.BOARD)
 
-testChannel1 = 37
-testChannel2 = 35
-pump = 33
+relay1 = 37
+relay2 = 35
+relay3 = 33
+relay4 = 31
+relay5 = 29
+relay6 = 15
+relay7 = 13
+relay8 = 11
 
-GPIO.setup(29, GPIO.OUT)
-GPIO.setup(31, GPIO.OUT)
+relays = [relay1, relay2, relay3, relay4, relay5, relay6, relay7, relay8]
 
-GPIO.output(29, GPIO.HIGH)
-GPIO.output(31, GPIO.HIGH)
+for relay in relays:
+    GPIO.setup(relay, GPIO.OUT)
+
+    GPIO.output(relay, GPIO.HIGH)

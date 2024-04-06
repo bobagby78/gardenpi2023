@@ -13,33 +13,30 @@ auxLight = 29  #8 galtank outlet num 5
 #create a light/pin array
 pins = [growLight, mainLight, auxLight]
 
-#set the pins as output, not input
+#set the pins as output, not input and set to off position
 for pin in pins:
     GPIO.setup(pin, GPIO.OUT)
+    GPIO.output(pin, GPIO.HIGH)
 
 time = datetime.now()
 
 print('*** starting lights at ', time, '.***')
 
 def runLights():
-#turn on all the lights
+#turn on lights
     for pin in pins:
         GPIO.output(pin, GPIO.LOW)
         print('growLight on')
         print('tank lights on')
 
-#wait 12 hours
-    sleep(43200)
+#wait 14 hours
+    sleep(50400)
 
-#kill aquarium lights
+#kill lights
     GPIO.output(mainLight, GPIO.HIGH)
     GPIO.output(auxLight, GPIO.HIGH)
     print('tank lights off')
 
-# wait 2 hours
-    sleep(7200)
-
-#kill grow light
     GPIO.output(growLight, GPIO.HIGH)
     print('growLight off')
 

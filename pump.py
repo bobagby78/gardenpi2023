@@ -21,15 +21,15 @@ print('*** starting pump at ', time, '.***')
 
 def runPump():
 
-    for _ in range(79):
+    for _ in range(59):
 
         GPIO.output(pump, GPIO.LOW)
         GPIO.output(testChannel1, GPIO.LOW)
         print('pump on')
-        sleep(38)
+        sleep(40)
         GPIO.output(pump, GPIO.HIGH)
         GPIO.output(testChannel1, GPIO.HIGH)
         print('pump off')
-        sleep(22)
+        sleep(20)
 
 runPump()
